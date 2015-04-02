@@ -33,7 +33,7 @@ def new_ball():
     x6, y6 = border(x6, y6)
     x7, y7 = border(x7, y7)
     x8, y8 = border(x8, y8)    
-    can.create_rectangle(0,  0,  500, 500,   fill="red")
+    can.create_rectangle(0,  0,  500, 500, fill="red")
     can.create_rectangle(20, 20, 480, 480, fill="orange")
     can.create_rectangle(90, 40, 410, 460, fill="red")
     can.create_oval(x1, y1, x1 + 20, y1 + 20, fill = "red",    width=3)
@@ -44,7 +44,6 @@ def new_ball():
     can.create_oval(x6, y6, x6 + 20, y6 + 20, fill = "green",  width=3)
     can.create_oval(x7, y7, x7 + 20, y7 + 20, fill = "white",  width=3)
     can.create_oval(x8, y8, x8 + 20, y8 + 20, fill = "blue",   width=3) 
-    can.create_oval(x1, y1, x1 + 20, y1 + 20, fill = "red",    width=3)  
     root.after(50, new_ball)    
 
 def play(event):
