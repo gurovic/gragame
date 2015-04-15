@@ -1,0 +1,24 @@
+from tkinter import *
+def inscription():
+    global line
+    print('heoo')
+    a = text1.get(str(line), END)
+    if a != '\n':
+        print(a)
+        line += 1.0
+    return    
+
+        
+root = Tk()
+root.title('CONSOLE')
+text1 = Text(root, height=10, width=50, font = 'Arial 14', wrap=WORD, bg ='blue', fg='red')
+text1.insert('1.0', 'Here is your console\n')
+text1.insert('2.0', 'You should use commands:\n')
+text1.insert('3.0', 'RunRight(), RunLeft(), RunUp(), RunDown(), Attack()\n')
+line = 4.0
+text1.pack()
+a = text1.get('4.0', END)
+print([a]) 
+text1.after(100, inscription)
+
+root.mainloop()
