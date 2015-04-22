@@ -1,13 +1,25 @@
 from tkinter import *
-def inscription():
+def inscription(event):
     global line
-    print('heoo')
     a = text1.get(str(line), END)
-    if a != '\n':
-        print(a)
-        line += 1.0
-    return    
+    analize(a)        
+    line += 1.0
+    
 
+def analize(a):
+    global line
+    if a == 'RunRight()\n':
+        RunRight()
+    elif a == 'RunLeft()\n':
+        RunLeft()
+    elif a == 'RunUp()\n':
+        RunUp()        
+    elif a == 'RunDown()\n':
+        RunDown()            
+    elif a == 'Attack()\n':
+        Attack()
+    else:
+        text1.insert(str(line)[:2] + str(len(a) + 1), ' Wrong Command')
         
 root = Tk()
 root.title('CONSOLE')
@@ -17,8 +29,5 @@ text1.insert('2.0', 'You should use commands:\n')
 text1.insert('3.0', 'RunRight(), RunLeft(), RunUp(), RunDown(), Attack()\n')
 line = 4.0
 text1.pack()
-a = text1.get('4.0', END)
-print([a]) 
-text1.after(100, inscription)
-
+text1.bind('<Return>', inscription)
 root.mainloop()
