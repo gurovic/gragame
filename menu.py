@@ -1,3 +1,4 @@
+#coding:utf-8
 from tkinter import *
 import sys
 import time
@@ -10,6 +11,8 @@ x5, y5 = 20,  240
 x6, y6 = 240, 460
 x7, y7 = 240, 20
 x8, y8 = 460, 240
+rule = 'лол взвзвзвзв-'
+rule2 = 'Эта игра была сделана учениками 9 класса В:\n Чернышев Вадим \n Александр Кучеренко \n Пархоменко Егор \nОтдельное спасибо нашим спонсорам : \n . . . \nТакже благодарим сценариста нашего проекта:\n Гуровица Владимира Михайловича'
 
 def border(x, y):
     if 20 < x <= 460 and y == 20:
@@ -39,8 +42,8 @@ def new_ball():
     can.create_oval(x1, y1, x1 + 20, y1 + 20, fill = "red",    width=3)
     can.create_oval(x2, y2, x2 + 20, y2 + 20, fill = "yellow", width=3)
     can.create_oval(x3, y3, x3 + 20, y3 + 20, fill = "purple", width=3)
-    can.create_oval(x4, y4, x4 + 20, y4 + 20, fill = "aqua",   width=3)
-    can.create_oval(x5, y5, x5 + 20, y5 + 20, fill = "orange", width=3)
+    can.create_oval(x4, y4, x4 + 20, y4 + 20, fill = "orange",   width=3)
+    can.create_oval(x5, y5, x5 + 20, y5 + 20, fill = "aqua", width=3)
     can.create_oval(x6, y6, x6 + 20, y6 + 20, fill = "green",  width=3)
     can.create_oval(x7, y7, x7 + 20, y7 + 20, fill = "white",  width=3)
     can.create_oval(x8, y8, x8 + 20, y8 + 20, fill = "blue",   width=3) 
@@ -50,10 +53,16 @@ def play(event):
     pass
 
 def rules(event):
-    pass
+    root2 = Tk()
+    text1 = Label(root2, text=rule, font='Arial 14')
+    text1.pack(side='top')
+    root2.mainloop()
 
 def creators(event):
-    pass
+    root3 = Tk()
+    text2 = Label(root3, text=rule2, font='Arial 14')
+    text2.pack(side='top')
+    root3.mainloop()
 
 def exit_from_a_game(event):
     sys.exit()
