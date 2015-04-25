@@ -1,0 +1,10 @@
+from tkinter import *
+root = Tk()
+root.title("GRAGAME")
+l, h = root.winfo_screenwidth() / 150, root.winfo_screenheight() / 150
+root.wm_geometry("+%d+%d" % (l, h))
+canvas = Canvas(root, width = 1000, height = 1000)
+can = PhotoImage(file='karl.gif')
+w = Label(root, width = 1000, height = 1000, image = can).pack()
+canvas.pack()
+root.mainloop()
