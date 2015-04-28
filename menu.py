@@ -50,7 +50,8 @@ def new_ball():
     root.after(50, new_ball)    
 
 def play(event):
-    pass
+    root.destroy()
+    os.system('game.py')
 
 def rules(event):
     root2 = Tk()
